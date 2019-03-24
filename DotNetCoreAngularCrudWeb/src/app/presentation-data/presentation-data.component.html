@@ -1,0 +1,22 @@
+<h1>Presentations</h1>
+<p *ngIf="!results"><em>Loading...</em></p>
+<input type="title" class="form-control" id="title" placeholder="Presentation Title" [(ngModel)]="title">
+<button type="submit" class="btn btn-primary mt-3 mb-3" (click)="GetStatusByTitle()">Get This Presentation</button>
+<table class="table table-striped" *ngIf="results">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Creator</th>
+            <th>Creation Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let result of results">
+            <td><img src={{result.thumbnail}}/></td>
+            <td>{{ result.title }}</td>
+            <td><a href="{{result.creator.profileUrl}}" target="_blank">{{result.creator.name}}</a></td>
+            <td>{{ result.createdAt | date:"dd/MM/yyyy" }}</td>
+        </tr>
+    </tbody>
+</table>
