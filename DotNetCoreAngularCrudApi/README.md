@@ -44,9 +44,11 @@ You can access the API endpoints over docker now :
 			
 ##	3 - From Heroku
 DotnetCoreAngularDataService project also contains Heroku integration. To run project from heroku, you have to run this commands after "docker build" step (mentioned above) :
+
 	- docker tag dotnetcoreangularcruddataservice.dll registry.heroku.com/dotnetcoreangulardataservice/web
 	- docker push registry.heroku.com/dotnetcoreangulardataservice/web
 	- heroku container:release web --app dotnetcoreangulardataservice
+
 Then you can access the endpoints from https://dotnetcoreangulardataservice.herokuapp.com/
 
 ![alt text](screenshots/dotnetcoreangularcruddataservice-herokudeploy.png "Heroku Deploy")				
