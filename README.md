@@ -2,7 +2,9 @@
 
 Technologies that I used : 
  - .Net Core 2.2
- - JWT Authentication
  - Angular
+ - JWT Authentication
+ - Docker
+ - Heroku
 
 You can find detailed readme files inside folders.
